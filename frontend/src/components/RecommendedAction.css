@@ -1,0 +1,94 @@
+.recommended-action {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--border-color);
+}
+
+.recommended-action.health-normal {
+  border-left-color: var(--status-normal);
+}
+
+.recommended-action.health-advisory {
+  border-left-color: var(--status-advisory);
+  background: var(--warning-bg, var(--card-bg));
+}
+
+.recommended-action.health-action-required {
+  border-left-color: var(--status-action-required);
+  background: var(--danger-bg, var(--card-bg));
+}
+
+.recommended-action.health-post-maintenance {
+  border-left-color: var(--status-post-maintenance);
+}
+
+.recommended-action .section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+}
+
+.recommended-action .action-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin: 0;
+  font-weight: 500;
+}
+
+.recommended-action.health-action-required .action-text {
+  font-weight: 600;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .recommended-action {
+    padding: 1.3rem;
+  }
+
+  .recommended-action .section-title {
+    font-size: 1.05rem;
+  }
+
+  .recommended-action .action-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .recommended-action {
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .recommended-action .section-title {
+    font-size: 1rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .recommended-action .action-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .recommended-action {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .recommended-action .section-title {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .recommended-action .action-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}

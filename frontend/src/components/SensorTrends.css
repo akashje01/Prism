@@ -1,0 +1,83 @@
+.sensor-trends {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.trends-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.no-data-message {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.no-data-message p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.no-data-message .data-count {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 12px;
+}
+
+/* Dark mode */
+.dark-mode .no-data-message {
+  background-color: var(--bg-tertiary);
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+.dark-mode .no-data-message .data-count {
+  color: var(--text-primary);
+}
+
+/* Tablet breakpoint - maintain 2 columns */
+@media (max-width: 1024px) {
+  .trends-grid {
+    gap: 18px;
+  }
+}
+
+/* Mobile breakpoint - switch to 1 column */
+@media (max-width: 768px) {
+  .trends-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .no-data-message {
+    padding: 30px 15px;
+  }
+
+  .no-data-message p {
+    font-size: 13px;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .sensor-trends {
+    margin-top: 15px;
+  }
+
+  .trends-grid {
+    gap: 12px;
+  }
+
+  .no-data-message {
+    padding: 25px 12px;
+  }
+
+  .no-data-message p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,160 @@
+.dashboard {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+}
+
+.dashboard-layout {
+  display: flex;
+  gap: 20px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.dashboard-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard-sidebar {
+  width: 350px;
+  flex-shrink: 0;
+}
+
+.loading-container,
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  padding: 40px;
+}
+
+.loading-message {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.error-container {
+  padding: 40px 20px;
+}
+
+.error-message {
+  text-align: center;
+  max-width: 500px;
+}
+
+.error-message p {
+  color: var(--health-action-required);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.retry-button {
+  padding: 10px 20px;
+  background-color: var(--text-primary);
+  color: var(--bg-secondary);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  letter-spacing: -0.01em;
+}
+
+.retry-button:hover {
+  background-color: var(--text-secondary);
+  transform: translateY(-1px);
+}
+
+.retry-button:focus {
+  outline: 2px solid var(--text-secondary);
+  outline-offset: 2px;
+}
+
+/* Dark mode support */
+.dark-mode .loading-message {
+  color: var(--text-secondary);
+}
+
+.dark-mode .error-message p {
+  color: var(--health-action-required);
+}
+
+/* Desktop breakpoint (1280px and above) */
+@media (min-width: 1280px) {
+  .dashboard-layout {
+    padding: 20px;
+  }
+
+  .dashboard-sidebar {
+    width: 380px;
+  }
+}
+
+/* Tablet breakpoint (768px to 1279px) - sidebar on right, narrower */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .dashboard-layout {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .dashboard-sidebar {
+    width: 300px;
+  }
+}
+
+/* Mobile breakpoint (below 768px) - sidebar below main content */
+@media (max-width: 767px) {
+  .dashboard-layout {
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+  }
+
+  .dashboard-main {
+    order: 1;
+  }
+
+  .dashboard-sidebar {
+    order: 2;
+    width: 100%;
+  }
+
+  .loading-container,
+  .error-container {
+    min-height: 300px;
+    padding: 30px 16px;
+  }
+
+  .loading-message {
+    font-size: 1.1rem;
+  }
+
+  .error-message p {
+    font-size: 1rem;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .loading-container,
+  .error-container {
+    min-height: 250px;
+    padding: 20px 12px;
+  }
+
+  .loading-message {
+    font-size: 1rem;
+  }
+
+  .error-message p {
+    font-size: 0.95rem;
+  }
+
+  .retry-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}

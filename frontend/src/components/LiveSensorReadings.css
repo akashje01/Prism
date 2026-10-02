@@ -1,0 +1,89 @@
+.live-sensor-readings {
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  letter-spacing: -0.015em;
+}
+
+.sensor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.no-sensors-message {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+}
+
+/* Dark mode support */
+.dark-mode .section-title {
+  color: var(--text-primary);
+}
+
+.dark-mode .no-sensors-message {
+  background: var(--card-bg);
+  color: var(--text-secondary);
+  box-shadow: var(--card-shadow);
+  border-color: var(--card-border);
+}
+
+/* Desktop breakpoint - 3-4 columns */
+@media (min-width: 1280px) {
+  .sensor-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet breakpoint - 2-3 columns */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .sensor-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile breakpoint - 2 columns */
+@media (min-width: 480px) and (max-width: 767px) {
+  .sensor-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+}
+
+/* Small mobile breakpoint - 1 column */
+@media (max-width: 479px) {
+  .sensor-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+  }
+
+  .live-sensor-readings {
+    margin-bottom: 24px;
+  }
+}

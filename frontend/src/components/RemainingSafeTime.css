@@ -1,0 +1,78 @@
+.remaining-safe-time {
+  background: var(--danger-bg, #fee);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid var(--status-action-required);
+  border-left: 4px solid var(--status-action-required);
+}
+
+.remaining-safe-time .section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--status-action-required);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.remaining-safe-time .time-estimate {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--status-action-required);
+  line-height: 1.4;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .remaining-safe-time {
+  background: rgba(220, 38, 38, 0.1);
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .remaining-safe-time {
+    padding: 1.3rem;
+  }
+
+  .remaining-safe-time .section-title {
+    font-size: 1.05rem;
+  }
+
+  .remaining-safe-time .time-estimate {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .remaining-safe-time {
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .remaining-safe-time .section-title {
+    font-size: 1rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .remaining-safe-time .time-estimate {
+    font-size: 1.3rem;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .remaining-safe-time {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .remaining-safe-time .section-title {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .remaining-safe-time .time-estimate {
+    font-size: 1.2rem;
+  }
+}

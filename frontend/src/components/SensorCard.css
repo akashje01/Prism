@@ -1,0 +1,146 @@
+.sensor-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Health state color ONLY for threshold exceeded */
+.sensor-card.threshold-exceeded {
+  border-color: var(--health-action-required);
+  background-color: rgba(231, 76, 60, 0.05);
+  box-shadow: 0 2px 12px rgba(231, 76, 60, 0.15);
+}
+
+.sensor-name {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.sensor-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+/* Health state color for threshold exceeded values */
+.sensor-card.threshold-exceeded .sensor-value {
+  color: var(--health-action-required);
+}
+
+.sensor-unit {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+/* Health state color for threshold exceeded units */
+.sensor-card.threshold-exceeded .sensor-unit {
+  color: var(--health-action-required);
+}
+
+/* Dark mode support */
+.dark-mode .sensor-card {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+.dark-mode .sensor-card.threshold-exceeded {
+  background-color: rgba(231, 76, 60, 0.1);
+  border-color: var(--health-action-required);
+  box-shadow: 0 2px 12px rgba(231, 76, 60, 0.2);
+}
+
+.dark-mode .sensor-name {
+  color: var(--text-secondary);
+}
+
+.dark-mode .sensor-value {
+  color: var(--text-primary);
+}
+
+.dark-mode .sensor-card.threshold-exceeded .sensor-value {
+  color: var(--health-action-required);
+}
+
+.dark-mode .sensor-unit {
+  color: var(--text-secondary);
+}
+
+.dark-mode .sensor-card.threshold-exceeded .sensor-unit {
+  color: var(--health-action-required);
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .sensor-card {
+    padding: 18px;
+    min-height: 110px;
+  }
+
+  .sensor-value {
+    font-size: 2.2rem;
+  }
+
+  .sensor-unit {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .sensor-card {
+    padding: 16px;
+    min-height: 100px;
+  }
+
+  .sensor-name {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  .sensor-value {
+    font-size: 2rem;
+  }
+
+  .sensor-unit {
+    font-size: 1rem;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .sensor-card {
+    padding: 14px;
+    min-height: 90px;
+  }
+
+  .sensor-name {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .sensor-value {
+    font-size: 1.8rem;
+  }
+
+  .sensor-unit {
+    font-size: 0.9rem;
+  }
+}

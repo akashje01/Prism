@@ -1,0 +1,93 @@
+.trend-charts {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.chart-container {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #e9ecef;
+}
+
+.chart-title {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Recharts tooltip styling */
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+.recharts-default-tooltip {
+  background-color: white !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  padding: 10px !important;
+}
+
+.recharts-tooltip-label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Legend styling */
+.recharts-legend-wrapper {
+  padding-top: 10px;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .trend-charts {
+    gap: 25px;
+  }
+
+  .chart-container {
+    padding: 18px;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .trend-charts {
+    gap: 20px;
+  }
+
+  .chart-container {
+    padding: 15px;
+  }
+
+  .chart-title {
+    font-size: 14px;
+  }
+
+  /* Make legend more compact on mobile */
+  .recharts-legend-wrapper {
+    font-size: 12px;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .trend-charts {
+    gap: 15px;
+  }
+
+  .chart-container {
+    padding: 12px;
+  }
+
+  .chart-title {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  /* Stack legend items vertically on very small screens */
+  .recharts-legend-wrapper {
+    font-size: 11px;
+  }
+}

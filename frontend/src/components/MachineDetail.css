@@ -1,0 +1,266 @@
+.machine-detail {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.machine-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.machine-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.machine-title h1 {
+  margin: 0;
+  font-size: 28px;
+  color: var(--text-primary);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.health-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Health state colors ONLY for health badges */
+.health-normal {
+  background-color: rgba(39, 174, 96, 0.1);
+  color: var(--health-normal);
+}
+
+.health-advisory {
+  background-color: rgba(243, 156, 18, 0.1);
+  color: var(--health-advisory);
+}
+
+.health-action-required {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: var(--health-action-required);
+}
+
+.health-post-maintenance {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: var(--health-post-maintenance);
+}
+
+.machine-id {
+  color: var(--text-tertiary);
+  font-size: 14px;
+  margin: 0;
+}
+
+.machine-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.machine-detail-content section {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+}
+
+.machine-detail-content section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.error {
+  color: var(--health-action-required);
+}
+
+.loading-container,
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  padding: 40px;
+}
+
+.loading-message {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.error-message {
+  text-align: center;
+  background-color: rgba(231, 76, 60, 0.05);
+  border: 1px solid rgba(231, 76, 60, 0.2);
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 500px;
+}
+
+.error-message p {
+  color: var(--health-action-required);
+  margin: 0 0 20px 0;
+  font-size: 16px;
+}
+
+.retry-button {
+  background-color: var(--text-primary);
+  color: var(--bg-secondary);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  letter-spacing: -0.01em;
+}
+
+.retry-button:hover {
+  background-color: var(--text-secondary);
+  transform: translateY(-1px);
+}
+
+.retry-button:active {
+  transform: translateY(0);
+}
+
+.partial-data-warning {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background-color: rgba(243, 156, 18, 0.1);
+  border: 1px solid rgba(243, 156, 18, 0.3);
+  border-radius: 6px;
+  color: var(--health-advisory);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.warning-icon {
+  font-size: 18px;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .machine-detail {
+    padding: 15px;
+  }
+
+  .machine-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .machine-detail-content {
+    gap: 25px;
+  }
+
+  .machine-detail-content section {
+    padding: 18px;
+  }
+
+  .machine-detail-content section h2 {
+    font-size: 18px;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .machine-detail {
+    padding: 10px;
+  }
+
+  .machine-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .machine-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .machine-title h1 {
+    font-size: 22px;
+  }
+
+  .machine-detail-content {
+    gap: 20px;
+  }
+
+  .machine-detail-content section {
+    padding: 15px;
+  }
+
+  .machine-detail-content section h2 {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+
+  .loading, .error {
+    padding: 30px;
+    font-size: 16px;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .machine-detail {
+    padding: 8px;
+  }
+
+  .machine-title h1 {
+    font-size: 20px;
+  }
+
+  .health-badge {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .machine-id {
+    font-size: 12px;
+  }
+
+  .machine-detail-content {
+    gap: 15px;
+  }
+
+  .machine-detail-content section {
+    padding: 12px;
+  }
+
+  .machine-detail-content section h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+}
+

@@ -1,0 +1,166 @@
+.bearing-evidence-panel {
+  border-radius: 8px;
+  padding: 20px;
+  border: 2px solid #e9ecef;
+}
+
+.bearing-evidence-panel.evidence-normal {
+  background-color: #f1f9f3;
+  border-color: #28a745;
+}
+
+.bearing-evidence-panel.evidence-advisory {
+  background-color: #fffbf0;
+  border-color: #ffc107;
+}
+
+.bearing-evidence-panel.evidence-critical {
+  background-color: #fff5f5;
+  border-color: #dc3545;
+}
+
+.evidence-header {
+  margin-bottom: 20px;
+}
+
+.evidence-header h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.evidence-description {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #495057;
+  line-height: 1.5;
+}
+
+.evidence-metadata {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.evidence-chart {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #e9ecef;
+}
+
+.evidence-chart h4 {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.evidence-info {
+  margin-top: 15px;
+}
+
+.info-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  border: 1px solid #e9ecef;
+}
+
+.info-box strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 13px;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .bearing-evidence-panel {
+    padding: 18px;
+  }
+
+  .evidence-header h3 {
+    font-size: 17px;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .bearing-evidence-panel {
+    padding: 15px;
+  }
+
+  .evidence-metadata {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .evidence-chart {
+    padding: 10px;
+  }
+
+  .evidence-header h3 {
+    font-size: 16px;
+  }
+
+  .evidence-description {
+    font-size: 13px;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .bearing-evidence-panel {
+    padding: 12px;
+  }
+
+  .evidence-header {
+    margin-bottom: 15px;
+  }
+
+  .evidence-header h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .evidence-description {
+    font-size: 12px;
+  }
+
+  .evidence-metadata {
+    font-size: 11px;
+  }
+
+  .evidence-chart {
+    padding: 8px;
+  }
+
+  .evidence-chart h4 {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .info-box {
+    padding: 12px;
+  }
+
+  .info-box strong {
+    font-size: 13px;
+  }
+
+  .info-box p {
+    font-size: 12px;
+  }
+}

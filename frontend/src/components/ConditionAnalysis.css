@@ -1,0 +1,87 @@
+.condition-analysis {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--border-color);
+}
+
+.condition-analysis.health-normal {
+  border-left-color: var(--status-normal);
+}
+
+.condition-analysis.health-advisory {
+  border-left-color: var(--status-advisory);
+}
+
+.condition-analysis.health-action-required {
+  border-left-color: var(--status-action-required);
+}
+
+.condition-analysis.health-post-maintenance {
+  border-left-color: var(--status-post-maintenance);
+}
+
+.condition-analysis .section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+}
+
+.condition-analysis .analysis-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .condition-analysis {
+    padding: 1.3rem;
+  }
+
+  .condition-analysis .section-title {
+    font-size: 1.05rem;
+  }
+
+  .condition-analysis .analysis-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .condition-analysis {
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .condition-analysis .section-title {
+    font-size: 1rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .condition-analysis .analysis-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .condition-analysis {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .condition-analysis .section-title {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .condition-analysis .analysis-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}

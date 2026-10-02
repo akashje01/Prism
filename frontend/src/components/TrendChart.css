@@ -1,0 +1,68 @@
+.trend-chart {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid var(--card-border);
+}
+
+.trend-chart.dark-mode {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+.trend-chart .chart-title {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.trend-chart.dark-mode .chart-title {
+  color: var(--text-primary);
+}
+
+/* Recharts tooltip styling */
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+.recharts-default-tooltip {
+  border-radius: 4px !important;
+  padding: 10px !important;
+}
+
+.recharts-tooltip-label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .trend-chart {
+    padding: 18px;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .trend-chart {
+    padding: 15px;
+  }
+
+  .trend-chart .chart-title {
+    font-size: 14px;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .trend-chart {
+    padding: 12px;
+  }
+
+  .trend-chart .chart-title {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+}

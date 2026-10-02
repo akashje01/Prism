@@ -1,0 +1,207 @@
+.global-advisories {
+  margin-bottom: 24px;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.global-advisories.empty {
+  background-color: #e8f5e9;
+  border-left: 5px solid #4caf50;
+}
+
+.global-advisories.active {
+  background-color: #fff3e0;
+  border-left: 5px solid #ff9800;
+}
+
+.advisory-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.advisory-icon {
+  font-size: 1.5rem;
+}
+
+.global-advisories.empty .advisory-icon {
+  color: #4caf50;
+}
+
+.global-advisories.active .advisory-icon {
+  color: #ff9800;
+}
+
+.advisory-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+  flex: 1;
+}
+
+.advisory-count {
+  background-color: #ff9800;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.empty-message {
+  margin: 0;
+  color: #2e7d32;
+  font-size: 1rem;
+}
+
+.advisory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.advisory-item {
+  background-color: white;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border-left: 3px solid #ff9800;
+}
+
+.advisory-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.advisory-item-header strong {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.machine-id-badge {
+  font-size: 0.85rem;
+  color: #666;
+  background-color: #f5f5f5;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.advisory-summary {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .global-advisories {
+    padding: 18px;
+  }
+
+  .advisory-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .advisory-item {
+    padding: 11px 14px;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .global-advisories {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .advisory-header {
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .advisory-icon {
+    font-size: 1.3rem;
+  }
+
+  .advisory-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .advisory-count {
+    padding: 3px 10px;
+    font-size: 0.85rem;
+  }
+
+  .advisory-item {
+    padding: 10px 12px;
+  }
+
+  .advisory-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .advisory-item-header strong {
+    font-size: 1rem;
+  }
+
+  .advisory-summary {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .global-advisories {
+    padding: 14px;
+    margin-bottom: 16px;
+  }
+
+  .advisory-header {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .advisory-icon {
+    font-size: 1.2rem;
+  }
+
+  .advisory-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .advisory-count {
+    padding: 2px 8px;
+    font-size: 0.8rem;
+  }
+
+  .empty-message {
+    font-size: 0.9rem;
+  }
+
+  .advisory-list {
+    gap: 10px;
+  }
+
+  .advisory-item {
+    padding: 8px 10px;
+  }
+
+  .advisory-item-header strong {
+    font-size: 0.95rem;
+  }
+
+  .machine-id-badge {
+    font-size: 0.8rem;
+    padding: 3px 6px;
+  }
+
+  .advisory-summary {
+    font-size: 0.85rem;
+  }
+}

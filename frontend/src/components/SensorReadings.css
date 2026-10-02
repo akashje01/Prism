@@ -1,0 +1,140 @@
+.sensor-readings {
+  width: 100%;
+}
+
+.sensor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.sensor-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+  border: 2px solid #e9ecef;
+  transition: all 0.2s;
+}
+
+.sensor-card.sensor-normal {
+  border-color: #28a745;
+  background-color: #f1f9f3;
+}
+
+.sensor-card.sensor-warning {
+  border-color: #ffc107;
+  background-color: #fffbf0;
+}
+
+.sensor-card.sensor-critical {
+  border-color: #dc3545;
+  background-color: #fff5f5;
+}
+
+.sensor-label {
+  font-size: 12px;
+  color: #6c757d;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.sensor-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.sensor-unit {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6c757d;
+  margin-left: 5px;
+}
+
+.sensor-status {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.sensor-status.status-warning {
+  background-color: #ffc107;
+  color: #856404;
+}
+
+.sensor-status.status-critical {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .sensor-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .sensor-value {
+    font-size: 26px;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .sensor-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .sensor-card {
+    padding: 12px;
+  }
+
+  .sensor-value {
+    font-size: 24px;
+  }
+
+  .sensor-unit {
+    font-size: 14px;
+  }
+
+  .sensor-label {
+    font-size: 11px;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .sensor-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .sensor-card {
+    padding: 10px;
+  }
+
+  .sensor-value {
+    font-size: 22px;
+  }
+
+  .sensor-unit {
+    font-size: 13px;
+  }
+
+  .sensor-label {
+    font-size: 10px;
+  }
+
+  .sensor-status {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}
